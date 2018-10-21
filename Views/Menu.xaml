@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="ASM.Views.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <SplitView x:Name="MainMenu" DisplayMode="CompactInline" IsPaneOpen="True">
+        <SplitView.Pane>
+            <StackPanel Margin="4 10 0 0">
+                <ToggleButton Click="Button_Click" IsChecked="False">
+                    <SymbolIcon Symbol="GlobalNavigationButton"/>
+                </ToggleButton>
+
+                <RadioButton Margin="2 0 0 10" Style="{ThemeResource TextBlockButtonStyle}" Tag="Personal" Click="RadioButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <SymbolIcon Margin="0 0 15 0" Symbol="Contact"></SymbolIcon>
+                        <TextBlock Text="Personal"/>
+                    </StackPanel>
+                </RadioButton>
+                
+                <RadioButton Margin="2 0 0 10" Style="{ThemeResource TextBlockButtonStyle}" Tag="Media_View" Click="RadioButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <SymbolIcon Margin="0 0 15 0" Symbol="MusicInfo"></SymbolIcon>
+                        <TextBlock Text="Media Player"/>
+                    </StackPanel>
+                </RadioButton>
+                
+            </StackPanel>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <Frame x:Name="MainContent"></Frame>
+        </SplitView.Content>
+    </SplitView>
+</Page>
