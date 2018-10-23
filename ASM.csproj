@@ -12,7 +12,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entities\BasicUserInfo.cs" />
     <Compile Include="Entities\LoginMember.cs" />
     <Compile Include="Entities\Member.cs" />
     <Compile Include="Entities\ErrorResponse.cs" />
@@ -104,14 +105,23 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sevices\Link.cs" />
-    <Compile Include="Views\MediaViews.xaml.cs">
-      <DependentUpon>MediaViews.xaml</DependentUpon>
+    <Compile Include="Views\Ablum.xaml.cs">
+      <DependentUpon>Ablum.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\From.xaml.cs">
-      <DependentUpon>From.xaml</DependentUpon>
+    <Compile Include="Views\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
+    <Compile Include="Views\Music.xaml.cs">
+      <DependentUpon>Music.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -139,15 +149,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\MediaViews.xaml">
+    <Page Include="Views\Ablum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\From.xaml">
+    <Page Include="Views\MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Menu.xaml">
+    <Page Include="Views\Music.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

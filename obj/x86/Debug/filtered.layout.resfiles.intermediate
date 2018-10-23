@@ -8,8 +8,11 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 ASM.xr.xml
 MainPage.xbf
-Views\From.xbf
-Views\MediaViews.xbf
-Views\Menu.xbf
+Views\Ablum.xbf
+Views\Account.xbf
+Views\Home.xbf
+Views\MainMenu.xbf
+Views\Music.xbf
+Views\UserInfo.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd

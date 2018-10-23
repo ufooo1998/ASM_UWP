@@ -189,21 +189,27 @@ namespace ASM.ASM_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[9];
             _typeNameTable[0] = "ASM.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "ASM.Views.MediaViews";
-            _typeNameTable[4] = "ASM.Views.Form";
-            _typeNameTable[5] = "ASM.Views.Menu";
+            _typeNameTable[3] = "ASM.Views.Ablum";
+            _typeNameTable[4] = "ASM.Views.MainMenu";
+            _typeNameTable[5] = "ASM.Views.Music";
+            _typeNameTable[6] = "ASM.Views.Account";
+            _typeNameTable[7] = "ASM.Views.Home";
+            _typeNameTable[8] = "ASM.Views.UserInfo";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[9];
             _typeTable[0] = typeof(global::ASM.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::ASM.Views.MediaViews);
-            _typeTable[4] = typeof(global::ASM.Views.Form);
-            _typeTable[5] = typeof(global::ASM.Views.Menu);
+            _typeTable[3] = typeof(global::ASM.Views.Ablum);
+            _typeTable[4] = typeof(global::ASM.Views.MainMenu);
+            _typeTable[5] = typeof(global::ASM.Views.Music);
+            _typeTable[6] = typeof(global::ASM.Views.Account);
+            _typeTable[7] = typeof(global::ASM.Views.Home);
+            _typeTable[8] = typeof(global::ASM.Views.UserInfo);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -239,9 +245,12 @@ namespace ASM.ASM_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::ASM.MainPage(); }
-        private object Activate_3_MediaViews() { return new global::ASM.Views.MediaViews(); }
-        private object Activate_4_Form() { return new global::ASM.Views.Form(); }
-        private object Activate_5_Menu() { return new global::ASM.Views.Menu(); }
+        private object Activate_3_Ablum() { return new global::ASM.Views.Ablum(); }
+        private object Activate_4_MainMenu() { return new global::ASM.Views.MainMenu(); }
+        private object Activate_5_Music() { return new global::ASM.Views.Music(); }
+        private object Activate_6_Account() { return new global::ASM.Views.Account(); }
+        private object Activate_7_Home() { return new global::ASM.Views.Home(); }
+        private object Activate_8_UserInfo() { return new global::ASM.Views.UserInfo(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -268,23 +277,44 @@ namespace ASM.ASM_XamlTypeInfo
                 xamlType = new global::ASM.ASM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  ASM.Views.MediaViews
+            case 3:   //  ASM.Views.Ablum
                 userType = new global::ASM.ASM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MediaViews;
+                userType.Activator = Activate_3_Ablum;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  ASM.Views.Form
+            case 4:   //  ASM.Views.MainMenu
                 userType = new global::ASM.ASM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_Form;
+                userType.Activator = Activate_4_MainMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  ASM.Views.Menu
+            case 5:   //  ASM.Views.Music
                 userType = new global::ASM.ASM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Menu;
+                userType.Activator = Activate_5_Music;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  ASM.Views.Account
+                userType = new global::ASM.ASM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Account;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  ASM.Views.Home
+                userType = new global::ASM.ASM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_Home;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  ASM.Views.UserInfo
+                userType = new global::ASM.ASM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_UserInfo;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
